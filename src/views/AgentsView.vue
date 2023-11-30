@@ -39,8 +39,6 @@
               <p>Loading agent image...</p>
             </div>
           </div>
-          <!-- {{ abilities }} -->
-          <!-- {{ selectedAbility }} -->
 
           <aside class="w-4/12">
             <div>
@@ -74,7 +72,7 @@
             :class="{ 'border-red-800 border-2': item.uuid === selectedAgentUuid, 'border-black border': item.uuid !== selectedAgentUuid }">
             <img
               :src="item.displayIcon || 'https://st3.depositphotos.com/23594922/31822/v/600/depositphotos_318221368-stock-illustration-missing-picture-page-for-website.jpg'"
-              class="w-16 h-16 object-cover" />
+              class="w-[5dvw] h-[5dvw] object-cover" />
           </button>
         </div>
       </section>
