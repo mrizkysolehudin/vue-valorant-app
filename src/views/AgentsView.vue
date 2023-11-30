@@ -137,9 +137,8 @@ const handleSelectAbility = (ability) => {
   selectedAbility.value = ability;
 };
 
-console.log(agent);
-
 </script>
+
 
 <style scoped>
 .bg-valorant {
