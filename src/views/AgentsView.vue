@@ -45,11 +45,12 @@
               <h3 class="text-center text-4xl font-extrabold">
                 ABILITIES
               </h3>
-              <div class="flex gap-8 mt-4">
+              <div class="flex gap-4 mt-4">
                 <button v-for="(abilityItem, index) in agent.abilities" :key="index"
                   @click="handleSelectAbility(abilityItem)"
-                  :class="{ 'border border-red-500 bg-red-500': abilityItem.slot === selectedAbility.slot, 'border': abilityItem.slot !== ability }">
-                  <img :src="abilityItem.displayIcon" alt="" class="p-2 w-14 h-14">
+                  :class="{ 'border border-red-500 bg-red-500': abilityItem.slot === selectedAbility.slot, 'border': abilityItem.slot !== ability && abilityItem.displayIcon }">
+                  <img v-if="abilityItem && abilityItem.displayIcon" :src="abilityItem.displayIcon" alt=""
+                    class="p-2 w-16 h-16">
                 </button>
               </div>
             </div>
