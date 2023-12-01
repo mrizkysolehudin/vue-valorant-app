@@ -9,15 +9,15 @@
       <section>
         <div v-if="agent" class="flex w-10/12 mx-auto">
           <aside class="w-4/12">
-            <h1 class="text-6xl font-extrabold scale-x-50 -ml-[9.5dvw]">
+            <h1 class="text-4xl font-extrabold uppercase">
               {{ agent.displayName }}
             </h1>
 
             <div>
-              <h3 class="text-xl scale-y-75  font-semibold mt-2">ROLE</h3>
+              <h3 class="text-xl scale-y-75 tracking-wider  mt-2">ROLE</h3>
               <p class="font-bold flex items-center gap-2 text-2xl">
                 <img :src="agent.role.displayIcon" alt="" class="w-6 h-6">
-                <span class="uppercase scale-x-75 -ml-[1.2dvw]">
+                <span class="uppercase tracking-wider">
                   {{ agent.role.displayName }}
                 </span>
               </p>
