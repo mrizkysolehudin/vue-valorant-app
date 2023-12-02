@@ -3,6 +3,6 @@
     <router-link :to="{ name: 'Agents' }" class="hover:text-red-400 "
       :class="{ 'text-red-400': $route.name === 'Agents' }">Agents</router-link>
     <router-link :to="{ name: 'Weapons' }" class="hover:text-red-400"
-      :class="{ 'text-red-400': $route.name === 'Weapons' }">Weapons</router-link>
+      :class="{ 'text-red-400': $route.name === 'Weapons' || $route.name === 'WeaponDetails' }">Weapons</router-link>
   </nav>
 </template>
