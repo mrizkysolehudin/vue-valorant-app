@@ -29,7 +29,7 @@
               <!-- class="absolute group-hover:grid hidden w-full h-full bg-[#FE4E62] text-white justify-between items-center px-3 "> -->
 
               <div id="animate2"
-                class="absolute group-hover:grid hidden w-full h-full bg-[#FE4E62] text-white justify-between items-center px-3">
+                class=" group-hover:animate-[wiggle_0.1s_ease-in-out] origin-left absolute group-hover:grid hidden w-full h-full bg-[#FE4E62] text-white justify-between items-center px-3">
                 <h3 class="font-bold uppercase text-5xl">
                   {{ weaponItem.displayName }}
                 </h3>
