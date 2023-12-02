@@ -11,17 +11,37 @@
 
           <div class="grid grid-cols-2">
             <article v-for="(weaponItem, idx) in filteredWeaponsByCategory(weaponCategoryItem)" :key="idx"
-              class="border border-gray-400 min-h-[25dvw] px-2 py-4 flex flex-col justify-between">
-              <h3 class="font-bold uppercase text-2xl">
-                {{ weaponItem.displayName }}
-              </h3>
-              <div class="">
-                <img :src="weaponItem.displayIcon" alt="" class="w-[89%] my-12 mx-auto">
+              class="relative group border border-gray-400 min-h-[25dvw]  flex flex-col justify-between"
+              :class="animationClass" @mouseover="startAnimation" @mouseleave="stopAnimation">
+              <div class="px-2 py-4">
+                <h3 class="font-bold uppercase text-2xl">
+                  {{ weaponItem.displayName }}
+                </h3>
+                <div class="">
+                  <img :src="weaponItem.displayIcon" alt="" class="w-[89%] my-12 mx-auto">
+                </div>
+                <p class="font-light">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat odit labore, fugit
+                  repellendus magnam!
+                </p>
               </div>
-              <p class="font-light">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat odit labore, fugit
-                repellendus magnam!
-              </p>
+
+              <!-- class="absolute group-hover:grid hidden w-full h-full bg-[#FE4E62] text-white justify-between items-center px-3 "> -->
+
+              <div id="animate2"
+                class="absolute group-hover:grid hidden w-full h-full bg-[#FE4E62] text-white justify-between items-center px-3">
+                <h3 class="font-bold uppercase text-5xl">
+                  {{ weaponItem.displayName }}
+                </h3>
+
+                <p class="font-light pt-4">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat odit labore, fugit
+                  repellendus magnam!
+                </p>
+                <router-link :to="{ name: 'WeaponDetails', params: { id: weaponItem.uuid } }"
+                  class="uppercase border border-white w-fit px-16 py-2 hover:bg-white hover:text-[#FE4E62]">See
+                  Details</router-link>
+              </div>
             </article>
           </div>
         </div>
@@ -68,3 +88,5 @@ const filteredWeaponsByCategory = (category) => {
 
 
 </script>
+
+<style scoped></style>

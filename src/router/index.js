@@ -17,6 +17,11 @@ const routes = [
     component: WeaponsView
   },
   {
+    path: '/weapons/:id',
+    name: 'WeaponDetails',
+    component: WeaponsView
+  },
+  {
     path: '/404',
     name: 'notFound',
     component: NotFoundView
